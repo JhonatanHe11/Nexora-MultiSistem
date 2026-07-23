@@ -1,0 +1,112 @@
+<div class="services">
+
+    <div class="section-title">
+        <span>NUESTROS SERVICIOS</span>
+        <h2>Soluciones técnicas para hogares e industrias</h2>
+        <p>
+            Contamos con personal especializado para ofrecer mantenimiento,
+            reparación e instalación de equipos domésticos, comerciales e industriales.
+        </p>
+    </div>
+
+    <!-- GIMNASIO -->
+
+    <div class="service-item">
+
+        <div class="service-image">
+            <img src="assets/images/reparacion_equipo_gym.jpg" alt="Gymnacion">
+        </div>
+
+        <div class="service-content">
+
+            <h3>Equipos de gimnasio</h3>
+
+            <p>
+                Mantenimiento preventivo y reparación de equipos fitness
+                para gimnasios, hoteles y centros deportivos.
+            </p>
+
+            <ul>
+
+                <li>Caminadoras</li>
+                <li>Bicicletas estáticas</li>
+                <li>Elípticas</li>
+                <li>Máquinas multifunción</li>
+                <li>Bancos y poleas</li>
+
+            </ul>
+
+            <button (click)="solicitarServicio()">Solicitar servicio</button>
+
+        </div>
+
+    </div>
+
+    <!-- INDUSTRIAL -->
+
+    <div class="service-item reverse">
+
+        <div class="service-image">
+            <img src="assets/images/maquina_ultrasonido.jpg" alt="industrial equipment">
+        </div>
+
+        <div class="service-content">
+
+            <h3>Equipos industriales</h3>
+
+            <p>
+                Servicio técnico especializado para maquinaria industrial
+                y equipos electrónicos.
+            </p>
+
+            <ul>
+
+                <li>Equipos de ultrasonido</li>
+                <li>Mantenimiento preventivo</li>
+                <li>Diagnóstico técnico</li>
+                <li>Reparación electrónica</li>
+                <li>Instalaciones industriales</li>
+
+            </ul>
+
+            <button (click)="solicitarServicio()">Solicitar servicio</button>
+
+        </div>
+
+    </div>
+
+    <!-- HOGAR -->
+
+    <div class="service-item">
+
+        <div class="service-image">
+            <img src="assets/images/hogar.jpg" alt="Hogar">
+        </div>
+
+        <div class="service-content">
+
+            <h3>Servicios para el hogar</h3>
+
+            <p>
+                Soluciones rápidas para los equipos y sistemas más importantes de tu hogar.
+            </p>
+
+            <ul>
+
+                <li>Calefones</li>
+                <li>Microondas</li>
+                <li>Cocinas</li>
+                <li>Plomería</li>
+                <li>Instalaciones eléctricas</li>
+
+            </ul>
+
+            <button (click)="solicitarServicio()">Solicitar servicio</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<app-modal-formulario-solicitud [(isOpen)]="isModalOpen"></app-modal-formulario-solicitud>

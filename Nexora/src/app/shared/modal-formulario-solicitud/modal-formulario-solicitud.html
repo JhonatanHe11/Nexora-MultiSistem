@@ -1,0 +1,30 @@
+<div class="overlay" *ngIf="isOpen" (click)="close()">
+    <div class="modal" (click)="$event.stopPropagation()">
+
+        <button class="close" (click)="close()">✕</button>
+
+        <h2>Solicitar Servicio</h2>
+        <p class="subtitle">
+            Completa la información y nos comunicaremos contigo por WhatsApp.
+        </p>
+
+        <form (ngSubmit)="enviarWhatsApp()">
+            <div class="form-group">
+                <label>Nombres</label>
+                <input type="text" name="nombre" [(ngModel)]="formulario.nombre" required>
+            </div>
+            <div class="form-group">
+                <label>WhatsApp</label>
+                <input type="text" name="telefono" [(ngModel)]="formulario.telefono" required>
+            </div>
+            <div class="form-group">
+                <label>Descripción</label>
+                <textarea name="descripcion" [(ngModel)]="formulario.descripcion" rows="5" required></textarea>
+            </div>
+            <button class="btn-submit" type="submit">
+                Enviar Solicitud
+            </button>
+        </form>
+
+    </div>
+</div>

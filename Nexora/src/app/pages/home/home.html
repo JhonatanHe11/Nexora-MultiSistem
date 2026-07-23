@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<section id="inicio" class="hero">
+  <div class="overlay">
+    <div class="home-content">
+      <h1>Servicios Técnicos Especializados</h1>
+      <p>Ofrecemos servicios de mantenimiento y reparación para todo tipo de equipos electrónicos y electrodomésticos.
+      </p>
+      <button class="btn btn-primary btn-service m-auto" (click)="solicitarServicio()">
+        Solicitar servicio
+      </button>
+    </div>
+  </div>
+</section>
+<app-modal-formulario-solicitud [(isOpen)]="isModalOpen"></app-modal-formulario-solicitud>
+
+<!----- CONTENIDO DE SERVICIOS ---------------------------->
+<section id="servicios" data-nav="light">
+  <app-servicios></app-servicios>
+</section>
+
+<!------ CONTENIDO DE NUESTROS TRABAJOS ------------------->
+<!--section id="nosotros" data-nav="light">
+  <app-nosotros></app-nosotros>
+</section-->
