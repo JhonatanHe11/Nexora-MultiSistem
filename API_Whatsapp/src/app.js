@@ -8,7 +8,7 @@ const {
 } = require('./whatsapp');
 
 const app = express();
-const VERIFY_TOKEN = "NexoraWebhook123";
+const VERIFY_TOKEN = "nexora_verify_2026";
 app.use(cors());
 app.use(express.json());
 
@@ -57,9 +57,15 @@ ${descripcion}
 
 app.get('/webhook', (req, res) => {
 
+    console.log("Query:", req.query);
+
     const mode = req.query['hub.mode'];
     const token = req.query['hub.verify_token'];
     const challenge = req.query['hub.challenge'];
+
+    console.log("Mode:", mode);
+    console.log("Token:", token);
+    console.log("Challenge:", challenge);
 
     if (mode === 'subscribe' && token === VERIFY_TOKEN) {
         return res.status(200).send(challenge);
