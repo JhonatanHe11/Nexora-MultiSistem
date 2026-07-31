@@ -31,6 +31,24 @@ export class ModalFormularioSolicitud {
   }
 
   enviarWhatsApp() {
+    const mensaje = `Hola, necesito solicitar un servicio.
+
+    Nombre: ${this.formulario.nombre}
+    Teléfono: ${this.formulario.telefono}
+    Mensaje: ${this.formulario.descripcion}`;
+
+    // Reemplaza por tu número de WhatsApp con código de país, sin + ni espacios.
+    const numero = '5930969011538';
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, '_blank');
+
+    this.close();
+  }
+
+  /*
+  enviarWhatsApp() {
     this.whatsappService
       .enviarSolicitud(this.formulario)
       .subscribe({
@@ -57,8 +75,7 @@ export class ModalFormularioSolicitud {
         }
 
       });
-
-
   }
+  */
   
 }
